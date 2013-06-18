@@ -95,4 +95,81 @@ stamp-env :
 .NOTPARALLEL:
 
 # start-generated-text
-# end of agen5/Makefile.am
+
+list_stamps = \
+    stamp-opts      stamp-proto     stamp-parse     stamp-cgi \
+    stamp-pseudo    stamp-exprini   stamp-directive stamp-texi \
+    stamp-ag_text   stamp-fmem      stamp-man       stamp-func \
+    stamp-gver
+if AMDEP
+@am__include@ @am__quote@./$(DEPDIR)/stamp-opts.d@am__quote@
+@am__include@ @am__quote@./$(DEPDIR)/stamp-proto.d@am__quote@
+@am__include@ @am__quote@./$(DEPDIR)/stamp-parse.d@am__quote@
+@am__include@ @am__quote@./$(DEPDIR)/stamp-cgi.d@am__quote@
+@am__include@ @am__quote@./$(DEPDIR)/stamp-pseudo.d@am__quote@
+@am__include@ @am__quote@./$(DEPDIR)/stamp-exprini.d@am__quote@
+@am__include@ @am__quote@./$(DEPDIR)/stamp-directive.d@am__quote@
+@am__include@ @am__quote@./$(DEPDIR)/stamp-texi.d@am__quote@
+@am__include@ @am__quote@./$(DEPDIR)/stamp-ag_text.d@am__quote@
+@am__include@ @am__quote@./$(DEPDIR)/stamp-fmem.d@am__quote@
+@am__include@ @am__quote@./$(DEPDIR)/stamp-man.d@am__quote@
+@am__include@ @am__quote@./$(DEPDIR)/stamp-func.d@am__quote@
+@am__include@ @am__quote@./$(DEPDIR)/stamp-gver.d@am__quote@
+endif
+
+stamp-opts:
+	@target="$(AUTOGEN_stamp_opts_TList)" \
+	$(MAKE_STAMP)
+
+stamp-proto:
+	@target="$(AUTOGEN_stamp_proto_TList)" \
+	$(MAKE_STAMP)
+
+stamp-parse:
+	@target="$(AUTOGEN_stamp_parse_TList)" \
+	$(MAKE_STAMP)
+
+stamp-cgi:
+	@target="$(AUTOGEN_stamp_cgi_TList)" \
+	$(MAKE_STAMP)
+
+stamp-pseudo:
+	@target="$(AUTOGEN_stamp_pseudo_TList)" \
+	$(MAKE_STAMP)
+
+stamp-exprini:
+	@target="$(AUTOGEN_stamp_exprini_TList)" \
+	$(MAKE_STAMP)
+
+stamp-directive:
+	@target="$(AUTOGEN_stamp_directive_TList)" \
+	$(MAKE_STAMP)
+
+stamp-texi:
+	@target="$(AUTOGEN_stamp_texi_TList)" \
+	$(MAKE_STAMP)
+
+stamp-ag_text:
+	@target="$(AUTOGEN_stamp_ag_text_TList)" \
+	$(MAKE_STAMP)
+
+stamp-fmem:
+	@target="$(AUTOGEN_stamp_fmem_TList)" \
+	$(MAKE_STAMP)
+
+stamp-man:
+	@target="$(AUTOGEN_stamp_man_TList)" \
+	$(MAKE_STAMP)
+
+stamp-func:
+	@target="$(AUTOGEN_stamp_func_TList)" \
+	$(MAKE_STAMP)
+
+stamp-gver:
+	@target="$(AUTOGEN_stamp_gver_TList)" \
+	$(MAKE_STAMP)
+.PHONY: stamps
+stamps: $(list_stamps)
+
+# end-generated-text
+# end of Makefile.am

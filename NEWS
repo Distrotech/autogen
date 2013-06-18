@@ -1,4 +1,4 @@
-New in __CURRENT_VERSION__ March 2013
+New in 5.17.4 - May 2013
 
 * --save-opts documentation cleanup
 * optionMemberList() will return an allocated string containing

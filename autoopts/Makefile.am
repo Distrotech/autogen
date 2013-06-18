@@ -38,6 +38,50 @@ GENTEXI         = libopts.texi libopts.menu
 TEXI_STAMP      = texi-stamp
 EXTRA_DIST      =
 GENMAN          = $(PATHFIND_MAN) \
+    ao_string_tokenize.3  configFileLoad.3      optionFileLoad.3 \
+    optionFindNextValue.3 optionFindValue.3     optionFree.3 \
+    optionGetValue.3      optionLoadLine.3      optionMemberList.3 \
+    optionNextValue.3     optionOnlyUsage.3     optionProcess.3 \
+    optionRestore.3       optionSaveFile.3      optionSaveState.3 \
+    optionUnloadNested.3  optionVersion.3       strequate.3 \
+    streqvcmp.3           streqvmap.3           strneqvcmp.3 \
+    strtransform.3
+
+nodist_pkgdata_DATA = $(libsrc) \
+    tpl/man2man         tpl/man2mdoc        tpl/man2texi \
+    tpl/mdoc2man        tpl/mdoc2mdoc       tpl/mdoc2texi \
+    tpl/texi2man        tpl/texi2mdoc       tpl/texi2texi \
+    tpl/tpl-config.tlib
+
+pkgdata_DATA    = \
+    autoopts.m4         tpl/aginfo.tpl      tpl/aginfo3.tpl \
+    tpl/agman-cmd.tpl   tpl/agman-file.tpl  tpl/agman.tlib \
+    tpl/agman1.tpl      tpl/agman3.tpl      tpl/agmdoc-cmd.tpl \
+    tpl/agmdoc-file.tpl tpl/agpl.lic        tpl/agtexi-cmd.tpl \
+    tpl/agtexi-file.tpl tpl/bits.tpl        tpl/cmd-doc.tlib \
+    tpl/def2pot.tpl     tpl/getopt.tpl      tpl/gpl.lic \
+    tpl/gplv2.lic       tpl/lgpl.lic        tpl/lgplv2.lic \
+    tpl/mbsd.lic        tpl/optcode.tlib    tpl/opthead.tlib \
+    tpl/options.tpl     tpl/optlib.tlib     tpl/optmain.tlib \
+    tpl/rc-sample.tpl   tpl/stdoptions.def  tpl/str2enum.tpl \
+    tpl/str2init.tlib   tpl/str2mask.tpl    tpl/strings.tpl \
+    tpl/usage.tlib
+
+EXTRA_DATA      = $(pkgdata_DATA) \
+    autogen.map            autoopts-config.in     bootstrap.dir \
+    install-hook.sh        mk-autoopts-pc.in      mk-tpl-config.sh \
+    po                     tpl/man2mdoc.pl        tpl/man2texi.sh \
+    tpl/mdoc2man.sh        tpl/mdoc2texi.pl       tpl/texi2man.sh \
+    tpl/texi2mdoc.sh       tpl/tpl-config-tlib.in
+
+GENSCRIPTS      = $(srcdir)/funcs.def \
+    tpl/man2man   tpl/man2mdoc  tpl/man2texi  tpl/mdoc2man  tpl/mdoc2mdoc \
+    tpl/mdoc2texi tpl/texi2man  tpl/texi2mdoc tpl/texi2texi
+
+EXTRA_DIST += $(top_srcdir)/config/gendocs.sh
+EXTRA_DIST += gettext.h
+EXTRA_DIST += parse-duration.c
+EXTRA_DIST += parse-duration.h
 
 GENHDRS         = autoopts/options.h autoopts/usage-txt.h genshell.h \
 		option-xat-attribute.h option-value-type.h ao-strs.h \

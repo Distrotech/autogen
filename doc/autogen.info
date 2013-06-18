@@ -1,0 +1,520 @@
+This is autogen.info, produced by makeinfo version 4.13 from
+/u/bkorb/ag/ag/doc//agdoc.texi.
+
+This manual is for GNU AutoGen version 5.17, updated May 2013.
+
+   Copyright (C) 1992-2013 by Bruce Korb.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, no Front-Cover Texts, and
+     no Back-Cover Texts.
+
+INFO-DIR-SECTION GNU programming tools
+START-INFO-DIR-ENTRY
+* AutoGen: (autogen).         The Automated Program Generator
+END-INFO-DIR-ENTRY
+
+   This file documents GNU AutoGen Version 5.17.
+
+   AutoGen copyright (C) 1992-2013 Bruce Korb AutoOpts copyright (C)
+1992-2013 Bruce Korb snprintfv copyright (C) 1999-2000 Gary V. Vaughan
+
+   AutoGen is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+
+   AutoGen is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+Indirect:
+autogen.info-1: 1448
+autogen.info-2: 301362
+autogen.info-3: 596791
+
+Tag Table:
+(Indirect)
+Node: Top1448
+Node: Introduction2883
+Node: Generalities4553
+Node: Example Usage7357
+Node: csh/zsh caveat12596
+Node: Testimonial13961
+Node: Definitions File16172
+Node: Identification18077
+Node: Definitions19366
+Node: def-list21089
+Node: double-quote-string21978
+Node: single-quote-string22846
+Node: simple-string23581
+Node: shell-generated24340
+Node: scheme-generated25025
+Node: here-string25422
+Node: concat-string27184
+Node: Index Assignments28168
+Node: Dynamic Text29630
+Node: Directives30805
+Node: Predefines32122
+Node: Comments33885
+Node: Example34300
+Node: Full Syntax35034
+Node: Alternate Definition49369
+Node: Template File51444
+Node: pseudo macro53073
+Node: naming values58774
+Node: expression syntax60055
+Node: apply code61293
+Node: basic expression63803
+Node: AutoGen Functions66094
+Node: SCM ag-fprintf70833
+Node: SCM ag-function?71614
+Node: SCM base-name71992
+Node: SCM chdir72372
+Node: SCM count72841
+Node: SCM def-file73324
+Node: SCM def-file-line73694
+Node: SCM dne74615
+Node: SCM emit75956
+Node: SCM emit-string-table76465
+Node: SCM error76914
+Node: SCM exist?77837
+Node: SCM find-file78609
+Node: SCM first-for?79152
+Node: SCM for-by79636
+Node: SCM for-from80070
+Node: SCM for-index80509
+Node: SCM for-sep80964
+Node: SCM for-to81508
+Node: SCM found-for?81937
+Node: SCM get82372
+Node: SCM get-c-name82863
+Node: SCM get-down-name83423
+Node: SCM get-up-name84049
+Node: SCM high-lim84665
+Node: SCM insert-suspended85368
+Node: SCM last-for?85809
+Node: SCM len86285
+Node: SCM low-lim86799
+Node: SCM make-header-guard87136
+Node: SCM make-tmp-dir88896
+Node: SCM match-value?89252
+Node: SCM mk-gettextable90156
+Node: SCM out-delete90605
+Node: SCM out-depth91102
+Node: SCM out-emit-suspended91451
+Node: SCM out-line91868
+Node: SCM out-move92243
+Node: SCM out-name92726
+Node: SCM out-pop93183
+Node: SCM out-push-add93809
+Node: SCM out-push-new94220
+Node: SCM out-resume94838
+Node: SCM out-suspend95328
+Node: SCM out-switch96031
+Node: SCM output-file-next-line96611
+Node: SCM set-option97541
+Node: SCM set-writable97953
+Node: SCM stack98525
+Node: SCM stack-join98913
+Node: SCM suffix99435
+Node: SCM tpl-file99748
+Node: SCM tpl-file-line100241
+Node: SCM tpl-file-next-line101231
+Node: SCM autogen-version101819
+Node: SCM c-file-line-fmt102190
+Node: Common Functions102611
+Node: SCM agpl107963
+Node: SCM bsd108421
+Node: SCM c-string108899
+Node: SCM error-source-line109666
+Node: SCM extract110200
+Node: SCM format-arg-count113549
+Node: SCM fprintf114458
+Node: SCM gperf115008
+Node: SCM gperf-code115738
+Node: SCM gpl116929
+Node: SCM hide-email117395
+Node: SCM html-escape-encode117859
+Node: SCM in?118360
+Node: SCM join118798
+Node: SCM kr-string119311
+Node: SCM lgpl119879
+Node: SCM license120403
+Node: SCM license-description120951
+Node: SCM license-full121705
+Node: SCM license-info123889
+Node: SCM license-name124846
+Node: SCM make-gperf125207
+Node: SCM makefile-script126203
+Node: SCM max128982
+Node: SCM min129295
+Node: SCM prefix129599
+Node: SCM printf130446
+Node: SCM raw-shell-str131011
+Node: SCM shell131762
+Node: SCM shell-str132768
+Node: SCM shellf135693
+Node: SCM sprintf136141
+Node: SCM string-capitalize136524
+Node: SCM string-capitalize!136987
+Node: SCM *=*137328
+Node: SCM *==*137898
+Node: SCM string-downcase138306
+Node: SCM string-downcase!138718
+Node: SCM *~139079
+Node: SCM *~~139501
+Node: SCM *=139883
+Node: SCM *==140265
+Node: SCM ==140677
+Node: SCM ~141023
+Node: SCM =141494
+Node: SCM *~*142276
+Node: SCM *~~*142689
+Node: SCM ~~143085
+Node: SCM ~*143451
+Node: SCM ~~*143865
+Node: SCM =*144258
+Node: SCM ==*144646
+Node: SCM string-substitute145031
+Node: SCM string-table-add145795
+Node: SCM string-table-add-ref146602
+Node: SCM string-table-new147175
+Node: SCM string-table-size149891
+Node: SCM string->c-name!150314
+Node: SCM string->camelcase150844
+Node: SCM string-tr151339
+Node: SCM string-tr!151817
+Node: SCM string-upcase152476
+Node: SCM string-upcase!152884
+Node: SCM sub-shell-str153246
+Node: SCM sum153698
+Node: SCM time-string->number154032
+Node: SCM version-compare154664
+Node: native macros155607
+Node: AGMacro syntax158807
+Node: BREAK160956
+Node: CASE161311
+Node: COMMENT164022
+Node: CONTINUE164569
+Node: DEBUG164829
+Node: DEFINE165696
+Node: ELIF167930
+Node: ELSE168406
+Node: ENDDEF168779
+Node: ENDFOR169046
+Node: ENDIF169348
+Node: ENDWHILE169626
+Node: ESAC169920
+Node: EXPR170202
+Node: FOR170681
+Node: IF173722
+Node: INCLUDE174759
+Node: INVOKE175407
+Node: RETURN176407
+Node: SELECT176946
+Node: UNKNOWN177437
+Node: WHILE177966
+Node: shell command178729
+Node: guile command179360
+Node: output controls179783
+Node: Augmenting AutoGen181787
+Node: shell commands182337
+Node: guile macros183160
+Node: guile callouts183619
+Node: AutoGen macros185811
+Node: autogen Invocation186428
+Node: autogen usage188317
+Node: autogen input-select193563
+Ref: autogen templ-dirs193872
+Ref: autogen override-tpl194370
+Ref: autogen lib-template194807
+Ref: autogen definitions195314
+Ref: autogen shell195952
+Ref: autogen no-fmemopen196568
+Ref: autogen equate197360
+Node: autogen out-handling197678
+Ref: autogen base-name197960
+Ref: autogen source-time199003
+Ref: autogen writable199402
+Node: autogen debug-tpl199545
+Ref: autogen loop-limit199939
+Ref: autogen timeout200340
+Ref: autogen trace200884
+Ref: autogen trace-out202861
+Ref: autogen show-defs203389
+Ref: autogen used-defines203782
+Ref: autogen core204510
+Node: autogen processing205031
+Ref: autogen skip-suffix205419
+Ref: autogen select-suffix206088
+Ref: autogen define206609
+Ref: autogen undefine207932
+Node: autogen dep-track208384
+Ref: autogen make-dep208651
+Node: autogen config211962
+Node: autogen exit status215031
+Node: autogen Examples216279
+Node: Installation217002
+Node: configuring217320
+Node: AutoGen CGI220174
+Node: signal names222601
+Node: installing223824
+Node: AutoOpts226608
+Node: Features228371
+Node: Licensing235974
+Node: Caveats237099
+Node: Quick Start240103
+Node: quick ao problem241274
+Node: quick ao def241888
+Node: quick ao build243116
+Node: quick ao help243702
+Node: quick ao usage244606
+Node: quick ao docs245692
+Node: Option Definitions246608
+Node: program attributes248539
+Node: usage attributes250440
+Node: config attributes254599
+Node: programming attributes257942
+Node: presentation attributes262818
+Node: library attributes266143
+Node: lib and program267020
+Node: lib called269434
+Node: prog calls lib270721
+Node: information attributes271599
+Node: Generated main276249
+Node: main guile277622
+Node: main shell-process278529
+Node: main shell-parser279893
+Node: main main280539
+Node: main include281411
+Node: main invoke282352
+Node: main for-each282840
+Node: main-for-each-proc283771
+Node: main-for-each-type284961
+Node: main-for-each-code288274
+Node: main-for-each-opts289060
+Node: option attributes290198
+Node: Required Attributes291585
+Node: Common Attributes293394
+Node: Immediate Action297315
+Node: Option Conflict Attributes299628
+Node: opt-attr settable300414
+Node: opt-attr no-preset301003
+Node: opt-attr equivalence301362
+Node: opt-attr aliases303579
+Node: opt-attr default option304245
+Node: opt-attr documentation305052
+Node: opt-attr translators306581
+Node: Option Arguments307194
+Node: arg-type string309325
+Node: arg-type number309626
+Node: arg-type boolean311533
+Node: arg-type keyword311984
+Node: arg-type set membership313940
+Node: arg-type hierarchy316329
+Node: arg-type file name317109
+Node: arg-type time-duration318357
+Node: arg-type time-date320312
+Node: arg-keyword321096
+Node: arg-optional321951
+Node: arg-default322670
+Node: Option Argument Handling323029
+Node: Internationalizing Options327228
+Node: documentation attributes329180
+Node: per option attributes329764
+Node: global option attributes331299
+Node: automatic options338319
+Node: standard options343879
+Node: AutoOpts API348093
+Node: Option Processing Data350990
+Node: CLEAR_OPT354586
+Node: COUNT_OPT354910
+Node: DESC355315
+Node: DISABLE_OPT_name355733
+Node: ENABLED_OPT356290
+Node: ERRSKIP_OPTERR356729
+Node: ERRSTOP_OPTERR357060
+Node: HAVE_OPT357514
+Node: ISSEL_OPT357883
+Node: ISUNUSED_OPT358191
+Node: OPTION_CT358501
+Node: OPT_ARG358857
+Node: OPT_NO_XLAT_CFG_NAMES359410
+Node: OPT_NO_XLAT_OPT_NAMES359945
+Node: OPT_VALUE_name360424
+Node: OPT_XLAT_CFG_NAMES360888
+Node: OPT_XLAT_OPT_NAMES361806
+Node: RESTART_OPT362566
+Node: SET_OPT_name363712
+Node: STACKCT_OPT364662
+Node: STACKLST_OPT365444
+Node: START_OPT366264
+Node: STATE_OPT366520
+Node: USAGE367469
+Node: VALUE_OPT_name368935
+Node: VERSION369589
+Node: WHICH_IDX_name370173
+Node: WHICH_OPT_name370731
+Node: teOptIndex371299
+Node: OPTIONS_STRUCT_VERSION371888
+Node: libopts procedures372681
+Node: libopts-ao_string_tokenize374258
+Node: libopts-configFileLoad376280
+Node: libopts-optionFileLoad377627
+Node: libopts-optionFindNextValue379211
+Node: libopts-optionFindValue380403
+Node: libopts-optionFree381457
+Node: libopts-optionGetValue382105
+Node: libopts-optionLoadLine383365
+Node: libopts-optionMemberList384812
+Node: libopts-optionNextValue385469
+Node: libopts-optionOnlyUsage386770
+Node: libopts-optionProcess387454
+Node: libopts-optionRestore389208
+Node: libopts-optionSaveFile390099
+Node: libopts-optionSaveState391344
+Node: libopts-optionUnloadNested392558
+Node: libopts-optionVersion393214
+Node: libopts-strequate393784
+Node: libopts-streqvcmp394404
+Node: libopts-streqvmap395356
+Node: libopts-strneqvcmp396464
+Node: libopts-strtransform397516
+Node: Multi-Threading398217
+Node: option descriptor399213
+Node: Using AutoOpts399864
+Node: local use400474
+Node: binary not installed402104
+Node: binary pre-installed402604
+Node: source pre-installed403233
+Node: source not installed404295
+Node: Presetting Options405420
+Node: loading rcfile407683
+Node: saving rcfile409389
+Node: sample rcfile409898
+Node: environrc418815
+Node: config example420721
+Node: Config File Format422584
+Node: config name/string-value423630
+Node: config integer-values426469
+Node: config nested-values426973
+Node: config directives427457
+Node: config comments429269
+Node: shell options429694
+Node: binary-parser431517
+Node: script-parser433953
+Node: AutoInfo459745
+Node: command-info461185
+Node: library-info462228
+Node: AutoMan pages463472
+Node: man1463926
+Node: man3465389
+Node: getopt_long468611
+Node: getopt limitations469521
+Node: getopt building471145
+Node: i18n473786
+Node: Naming Conflicts475348
+Node: All Attribute Names476736
+Node: Option Define Names478907
+Node: Add-Ons491267
+Node: AutoFSM492345
+Node: AutoXDR492768
+Node: AutoEvents493599
+Node: Bit Maps494845
+Node: enums495812
+Node: enum-code498737
+Node: masks505184
+Node: columns Invocation506836
+Node: columns usage508617
+Node: columns dimensions511963
+Ref: columns width512207
+Ref: columns columns512657
+Ref: columns col-width512974
+Ref: columns tab-width513287
+Node: columns treatment513481
+Ref: columns spread513720
+Ref: columns fill514086
+Ref: columns indent514548
+Ref: columns first-indent514851
+Ref: columns format515567
+Ref: columns separation515875
+Ref: columns line-separation516132
+Ref: columns ending516379
+Node: columns ordering516543
+Ref: columns by-columns516792
+Ref: columns sort517099
+Node: columns input-text517435
+Ref: columns input517688
+Node: columns config517935
+Node: columns exit status520680
+Node: columns See Also521264
+Node: getdefs Invocation521539
+Node: getdefs usage524413
+Node: getdefs def-selection528321
+Ref: getdefs defs-to-get528617
+Ref: getdefs subblock528943
+Ref: getdefs listattr529888
+Node: getdefs enumerating530589
+Ref: getdefs ordering530849
+Ref: getdefs first-index531400
+Node: getdefs doc-insert531701
+Ref: getdefs filelist531948
+Ref: getdefs assign532320
+Ref: getdefs common-assign532670
+Ref: getdefs copy533016
+Ref: getdefs srcfile533341
+Ref: getdefs linenum533746
+Node: getdefs input-files534132
+Ref: getdefs input534387
+Node: getdefs doc-output534994
+Ref: getdefs output535242
+Ref: getdefs autogen535558
+Ref: getdefs template536083
+Ref: getdefs agarg536268
+Ref: getdefs base-name536681
+Node: getdefs config537163
+Node: getdefs exit status539390
+Node: getdefs See Also539974
+Node: xml2ag Invocation540249
+Node: xml2ag usage542127
+Node: xml2ag the-xml2ag-option546121
+Ref: xml2ag output546403
+Node: xml2ag autogen-options546636
+Ref: xml2ag templ-dirs547117
+Ref: xml2ag override-tpl547394
+Ref: xml2ag lib-template547583
+Ref: xml2ag definitions547899
+Ref: xml2ag shell548057
+Ref: xml2ag no-fmemopen548243
+Ref: xml2ag equate548354
+Ref: xml2ag base-name548539
+Ref: xml2ag source-time548723
+Ref: xml2ag writable548843
+Ref: xml2ag loop-limit548970
+Ref: xml2ag timeout549137
+Ref: xml2ag trace549312
+Ref: xml2ag trace-out549893
+Ref: xml2ag show-defs550060
+Ref: xml2ag used-defines550182
+Ref: xml2ag core550299
+Ref: xml2ag skip-suffix550871
+Ref: xml2ag select-suffix551248
+Ref: xml2ag define551513
+Ref: xml2ag undefine551785
+Ref: xml2ag make-dep552061
+Node: xml2ag exit status552291
+Node: snprintfv552635
+Node: Future555152
+Node: Copying This Manual555491
+Node: Concept Index578032
+Node: Function Index596791
+
+End Tag Table
