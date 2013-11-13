@@ -1,4 +1,4 @@
-New in __CURRENT_VERSION__ September 2013
+New in 5.18.1 - November 2013
 
 * fixed char casting issue that shows in UTF-8 files
 * fixed installation error for str2init

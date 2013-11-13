@@ -18,7 +18,10 @@
 ## with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 DISTCLEANFILES  = autogen.lsm
-LIBOPTS_FILES   = ALL SOURCES IN pkg/libopts DIRECTORY
+LIBOPTS_FILES   = \
+    libopts/mklibsrc.sh    libopts/COPYING.lgplv3 libopts/README \
+    libopts/COPYING.gplv3  libopts/COPYING.mbsd   libopts/libopts-add.m4
+
 TPL_FILES       = lsm.tpl spec.tpl gnudir.tpl gnudoc.tpl
 PKG_FILES       = mkpkg.linux mkpkg.sh mkpkg.sun pkg-env.in
 EXTRA_DIST      = $(TPL_FILES) $(LIBOPTS_FILES) $(PKG_FILES)
