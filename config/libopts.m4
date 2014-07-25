@@ -113,6 +113,7 @@ AC_DEFUN([INVOKE_LIBOPTS_MACROS_FIRST],[
   AC_PROG_SED
   [while :
   do
+      test -x "$POSIX_SHELL" && break
       POSIX_SHELL=`which bash`
       test -x "$POSIX_SHELL" && break
       POSIX_SHELL=`which dash`
